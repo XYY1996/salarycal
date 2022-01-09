@@ -1,0 +1,15 @@
+input{
+    width: 30000
+}
+table, th, td {
+    border: 1px solid #D6EEEE;
+    border-collapse: collapse;
+  }
+  
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
+
+body {
+    padding-left: 35%;
+}
