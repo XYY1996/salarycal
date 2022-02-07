@@ -107,8 +107,9 @@ class SalaryCal extends React.Component {
 
 
         const monthlysalaryCash =  tofloat(monthlysalary - monthly_five_found_person - housing_provident_fund_person);
+        const yearly_FiveFund_salary = tofloat((monthly_five_found_person + housing_provident_fund_person + monthly_five_found_company + housing_provident_fund_company) * 12);
         const yearlysalaryCash = tofloat(monthlysalaryCash * 12 + year_prize_salary + another_month_salary);
-        const yearlytotalIncome = tofloat(yearlysalaryCash + (monthly_five_found_person + housing_provident_fund_person + monthly_five_found_company + housing_provident_fund_company) * 12);
+        const yearlytotalIncome = tofloat(yearlysalaryCash + yearly_FiveFund_salary);
 
         return (
             <div>
@@ -171,6 +172,7 @@ class SalaryCal extends React.Component {
                 <p>五险一金缴纳基数：{monthlyFiveFundBaseNumber}</p>
                 <p>每月现金收入： {monthlysalaryCash} </p>
                 <p>每年现金收入： {yearlysalaryCash} </p>
+                <p>每年五险一金收入： {yearly_FiveFund_salary} </p>
                 <p>年终奖 ： {year_prize_salary}</p>
                 <p>十三薪 ： {another_month_salary}</p>
                 <p>每年综合五险一金总收入： {yearlytotalIncome} </p>
